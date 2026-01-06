@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="DaTech - TickEat: La solución más puntera para la gestión de comandas en bares y restaurantes">
+    <title>DaTech - TickEat | Gestión de Comandas Profesional</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navegación -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <div class="logo">
+                    <svg class="logo-svg" viewBox="0 0 200 60" xmlns="http://www.w3.org/2000/svg">
+                        <!-- Forma hexagonal alargada con gradiente -->
+                        <defs>
+                            <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                                <stop offset="0%" style="stop-color:#3B82F6;stop-opacity:1" />
+                                <stop offset="30%" style="stop-color:#1E40AF;stop-opacity:1" />
+                                <stop offset="70%" style="stop-color:#F97316;stop-opacity:1" />
+                                <stop offset="100%" style="stop-color:#FB923C;stop-opacity:1" />
+                            </linearGradient>
+                            <linearGradient id="speedLinesLeft" x1="0%" y1="0%" x2="100%" y2="0%">
+                                <stop offset="0%" style="stop-color:#60A5FA;stop-opacity:0.4" />
+                                <stop offset="100%" style="stop-color:#3B82F6;stop-opacity:0.2" />
+                            </linearGradient>
+                            <linearGradient id="speedLinesRight" x1="0%" y1="0%" x2="100%" y2="0%">
+                                <stop offset="0%" style="stop-color:#FB923C;stop-opacity:0.2" />
+                                <stop offset="100%" style="stop-color:#F97316;stop-opacity:0.4" />
+                            </linearGradient>
+                        </defs>
+                        
+                        <!-- Líneas de velocidad izquierda -->
+                        <rect x="2" y="8" width="8" height="2" fill="url(#speedLinesLeft)" rx="1"/>
+                        <rect x="2" y="12" width="6" height="2" fill="url(#speedLinesLeft)" rx="1"/>
+                        <rect x="2" y="16" width="10" height="2" fill="url(#speedLinesLeft)" rx="1"/>
+                        <rect x="2" y="42" width="8" height="2" fill="url(#speedLinesLeft)" rx="1"/>
+                        <rect x="2" y="46" width="6" height="2" fill="url(#speedLinesLeft)" rx="1"/>
+                        <rect x="2" y="50" width="10" height="2" fill="url(#speedLinesLeft)" rx="1"/>
+                        
+                        <!-- Forma hexagonal principal -->
+                        <path d="M 25 5 Q 20 2 15 5 L 5 15 Q 2 20 5 25 L 5 35 Q 2 40 5 45 L 15 55 Q 20 58 25 55 L 175 55 Q 180 58 185 55 L 195 45 Q 198 40 195 35 L 195 25 Q 198 20 195 15 L 185 5 Q 180 2 175 5 Z" 
+                              fill="url(#logoGradient)" 
+                              stroke="rgba(255,255,255,0.3)" 
+                              stroke-width="0.5"/>
+                        
+                        <!-- Líneas de velocidad derecha -->
+                        <rect x="190" y="8" width="8" height="2" fill="url(#speedLinesRight)" rx="1"/>
+                        <rect x="192" y="12" width="6" height="2" fill="url(#speedLinesRight)" rx="1"/>
+                        <rect x="188" y="16" width="10" height="2" fill="url(#speedLinesRight)" rx="1"/>
+                        <rect x="190" y="42" width="8" height="2" fill="url(#speedLinesRight)" rx="1"/>
+                        <rect x="192" y="46" width="6" height="2" fill="url(#speedLinesRight)" rx="1"/>
+                        <rect x="188" y="50" width="10" height="2" fill="url(#speedLinesRight)" rx="1"/>
+                        
+                        <!-- Línea de circuito superior (desde la D) -->
+                        <path d="M 35 20 Q 30 15 25 12 Q 20 10 15 12" 
+                              stroke="white" 
+                              stroke-width="1.5" 
+                              fill="none" 
+                              stroke-linecap="round"/>
+                        <circle cx="15" cy="12" r="2" fill="white"/>
+                        
+                        <!-- Línea de circuito inferior (desde la h) -->
+                        <path d="M 75 40 Q 70 45 65 48 Q 60 50 55 48" 
+                              stroke="white" 
+                              stroke-width="1.5" 
+                              fill="none" 
+                              stroke-linecap="round"/>
+                        <circle cx="55" cy="48" r="2" fill="white"/>
+                        
+                        <!-- Texto DaTech en blanco dentro del logo -->
+                        <text x="100" y="35" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="700" fill="white" text-anchor="middle" letter-spacing="0.5px">DaTech</text>
+                    </svg>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#sobre-tickeat">TickEat</a></li>
+                    <li><a href="#caracteristicas">Características</a></li>
+                    <li><a href="#ventajas">Ventajas</a></li>
+                    <li><a href="#contacto" class="btn-contact">Contáctanos</a></li>
+                </ul>
+                <button class="menu-toggle" aria-label="Menú">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="hero">
+        <div class="hero-background">
+            <div class="gradient-overlay"></div>
+            <div class="circuit-pattern"></div>
+        </div>
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    <span class="gradient-text">TickEat</span>
+                    <br>La Revolución en Gestión de Comandas
+                </h1>
+                <p class="hero-subtitle">
+                    Diseñada específicamente para bares y restaurantes. 
+                    La solución más puntera del mercado para optimizar tu negocio.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#contacto" class="btn btn-primary">Solicitar Demo</a>
+                    <a href="#sobre-tickeat" class="btn btn-secondary">Conocer más</a>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="mouse"></div>
+        </div>
+    </section>
+
+    <!-- Sobre TickEat -->
+    <section id="sobre-tickeat" class="about-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">¿Qué es TickEat?</h2>
+                <div class="title-underline"></div>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <p class="lead-text">
+                        La aplicación <strong>TickEat</strong> se ha diseñado específicamente para los bares, restaurantes y establecimientos de hostelería que buscan una solución moderna y eficiente para la gestión de comandas.
+                    </p>
+                    <p>
+                        TickEat ofrece una interfaz de sencillo uso y personalizable para ofrecer el mejor uso posible. Se trata de una aplicación para tiquear de manera sencilla, también nos ofrece un apartado organizado para pedidos para llevar.
+                    </p>
+                    <p>
+                        Se podrá añadir o ajustar manualmente los productos que se ofrecerán en la empresa sin necesidad de necesitar un mantenimiento constante, dándote total control sobre tu menú y productos.
+                    </p>
+                </div>
+                <div class="about-visual">
+                    <div class="feature-card">
+                        <div class="card-icon">📱</div>
+                        <h3>Interfaz Intuitiva</h3>
+                        <p>Diseño pensado para facilitar el trabajo diario</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="card-icon">⚙️</div>
+                        <h3>Totalmente Personalizable</h3>
+                        <p>Adapta la aplicación a las necesidades de tu negocio</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Características Principales -->
+    <section id="caracteristicas" class="features-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Características Principales</h2>
+                <div class="title-underline"></div>
+                <p class="section-subtitle">Todo lo que necesitas para gestionar tu negocio de manera eficiente</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M9 11l3 3L22 4"></path>
+                            <path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"></path>
+                        </svg>
+                    </div>
+                    <h3>Gestión de Comandas</h3>
+                    <p>Sistema rápido y eficiente para tomar y gestionar pedidos en tiempo real</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M16 4h2a2 2 0 012 2v14a2 2 0 01-2 2H6a2 2 0 01-2-2V6a2 2 0 012-2h2"></path>
+                            <rect x="8" y="2" width="8" height="4" rx="1" ry="1"></rect>
+                        </svg>
+                    </div>
+                    <h3>Pedidos para Llevar</h3>
+                    <p>Apartado organizado y dedicado para gestionar pedidos para llevar de forma eficiente</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 2v20M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"></path>
+                        </svg>
+                    </div>
+                    <h3>Gestión de Productos</h3>
+                    <p>Añade, modifica o elimina productos manualmente sin necesidad de mantenimiento externo</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                        </svg>
+                    </div>
+                    <h3>Personalización Total</h3>
+                    <p>Adapta la interfaz y funcionalidades a las necesidades específicas de tu establecimiento</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <polyline points="12 6 12 12 16 14"></polyline>
+                        </svg>
+                    </div>
+                    <h3>Ahorro de Tiempo</h3>
+                    <p>Optimiza los procesos de tu negocio y reduce el tiempo de gestión de pedidos</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"></svg>
+                    </div>
+                    <h3>Sin Mantenimiento</h3>
+                    <p>Gestiona todo por ti mismo sin depender de soporte técnico constante</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Por qué somos los más punteros -->
+    <section id="ventajas" class="advantages-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">¿Por qué somos los más punteros del mercado?</h2>
+                <div class="title-underline"></div>
+            </div>
+            <div class="advantages-content">
+                <div class="advantage-card">
+                    <div class="advantage-number">01</div>
+                    <h3>Diseño Específico</h3>
+                    <p>TickEat ha sido diseñada específicamente para bares y restaurantes, no es una solución genérica adaptada. Cada funcionalidad está pensada para las necesidades reales del sector hostelero.</p>
+                </div>
+                <div class="advantage-card">
+                    <div class="advantage-number">02</div>
+                    <h3>Simplicidad y Potencia</h3>
+                    <p>Combinamos una interfaz intuitiva y fácil de usar con funcionalidades potentes que te permiten gestionar tu negocio de manera profesional sin complicaciones.</p>
+                </div>
+                <div class="advantage-card">
+                    <div class="advantage-number">03</div>
+                    <h3>Autonomía Total</h3>
+                    <p>Control total sobre tu menú y productos. Añade, modifica o elimina elementos sin depender de soporte técnico, ahorrando tiempo y costes de mantenimiento.</p>
+                </div>
+                <div class="advantage-card">
+                    <div class="advantage-number">04</div>
+                    <h3>Organización Profesional</h3>
+                    <p>Sistema dedicado para pedidos para llevar que te permite mantener organizados todos tus pedidos, mejorando la eficiencia y la satisfacción del cliente.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Contacto -->
+    <section id="contacto" class="contact-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Contrata Nuestros Servicios</h2>
+                <div class="title-underline"></div>
+                <p class="section-subtitle">Estamos listos para transformar la gestión de tu negocio</p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>¿Listo para empezar?</h3>
+                    <p>Ponte en contacto con nosotros y descubre cómo TickEat puede revolucionar la gestión de tu establecimiento.</p>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <div class="contact-icon">📧</div>
+                            <div>
+                                <h4>Email</h4>
+                                <p>contacto@datech.com</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">📱</div>
+                            <div>
+                                <h4>Teléfono</h4>
+                                <p>+34 XXX XXX XXX</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <label for="name">Nombre completo</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Teléfono</label>
+                        <input type="tel" id="phone" name="phone" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="business">Nombre del establecimiento</label>
+                        <input type="text" id="business" name="business" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Mensaje</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-full">Enviar Solicitud</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="logo">
+                        <svg class="logo-svg" viewBox="0 0 200 60" xmlns="http://www.w3.org/2000/svg">
+                            <!-- Forma hexagonal alargada con gradiente -->
+                            <defs>
+                                <linearGradient id="logoGradientFooter" x1="0%" y1="0%" x2="100%" y2="0%">
+                                    <stop offset="0%" style="stop-color:#3B82F6;stop-opacity:1" />
+                                    <stop offset="30%" style="stop-color:#1E40AF;stop-opacity:1" />
+                                    <stop offset="70%" style="stop-color:#F97316;stop-opacity:1" />
+                                    <stop offset="100%" style="stop-color:#FB923C;stop-opacity:1" />
+                                </linearGradient>
+                                <linearGradient id="speedLinesLeftFooter" x1="0%" y1="0%" x2="100%" y2="0%">
+                                    <stop offset="0%" style="stop-color:#60A5FA;stop-opacity:0.4" />
+                                    <stop offset="100%" style="stop-color:#3B82F6;stop-opacity:0.2" />
+                                </linearGradient>
+                                <linearGradient id="speedLinesRightFooter" x1="0%" y1="0%" x2="100%" y2="0%">
+                                    <stop offset="0%" style="stop-color:#FB923C;stop-opacity:0.2" />
+                                    <stop offset="100%" style="stop-color:#F97316;stop-opacity:0.4" />
+                                </linearGradient>
+                            </defs>
+                            
+                            <!-- Líneas de velocidad izquierda -->
+                            <rect x="2" y="8" width="8" height="2" fill="url(#speedLinesLeftFooter)" rx="1"/>
+                            <rect x="2" y="12" width="6" height="2" fill="url(#speedLinesLeftFooter)" rx="1"/>
+                            <rect x="2" y="16" width="10" height="2" fill="url(#speedLinesLeftFooter)" rx="1"/>
+                            <rect x="2" y="42" width="8" height="2" fill="url(#speedLinesLeftFooter)" rx="1"/>
+                            <rect x="2" y="46" width="6" height="2" fill="url(#speedLinesLeftFooter)" rx="1"/>
+                            <rect x="2" y="50" width="10" height="2" fill="url(#speedLinesLeftFooter)" rx="1"/>
+                            
+                            <!-- Forma hexagonal principal -->
+                            <path d="M 25 5 Q 20 2 15 5 L 5 15 Q 2 20 5 25 L 5 35 Q 2 40 5 45 L 15 55 Q 20 58 25 55 L 175 55 Q 180 58 185 55 L 195 45 Q 198 40 195 35 L 195 25 Q 198 20 195 15 L 185 5 Q 180 2 175 5 Z" 
+                                  fill="url(#logoGradientFooter)" 
+                                  stroke="rgba(255,255,255,0.3)" 
+                                  stroke-width="0.5"/>
+                            
+                            <!-- Líneas de velocidad derecha -->
+                            <rect x="190" y="8" width="8" height="2" fill="url(#speedLinesRightFooter)" rx="1"/>
+                            <rect x="192" y="12" width="6" height="2" fill="url(#speedLinesRightFooter)" rx="1"/>
+                            <rect x="188" y="16" width="10" height="2" fill="url(#speedLinesRightFooter)" rx="1"/>
+                            <rect x="190" y="42" width="8" height="2" fill="url(#speedLinesRightFooter)" rx="1"/>
+                            <rect x="192" y="46" width="6" height="2" fill="url(#speedLinesRightFooter)" rx="1"/>
+                            <rect x="188" y="50" width="10" height="2" fill="url(#speedLinesRightFooter)" rx="1"/>
+                            
+                            <!-- Línea de circuito superior (desde la D) -->
+                            <path d="M 35 20 Q 30 15 25 12 Q 20 10 15 12" 
+                                  stroke="white" 
+                                  stroke-width="1.5" 
+                                  fill="none" 
+                                  stroke-linecap="round"/>
+                            <circle cx="15" cy="12" r="2" fill="white"/>
+                            
+                            <!-- Línea de circuito inferior (desde la h) -->
+                            <path d="M 75 40 Q 70 45 65 48 Q 60 50 55 48" 
+                                  stroke="white" 
+                                  stroke-width="1.5" 
+                                  fill="none" 
+                                  stroke-linecap="round"/>
+                            <circle cx="55" cy="48" r="2" fill="white"/>
+                            
+                            <!-- Texto DaTech en blanco dentro del logo -->
+                            <text x="100" y="35" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="700" fill="white" text-anchor="middle" letter-spacing="0.5px">DaTech</text>
+                        </svg>
+                    </div>
+                    <p>La solución más puntera para la gestión de comandas en hostelería.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Enlaces</h4>
+                    <ul>
+                        <li><a href="#inicio">Inicio</a></li>
+                        <li><a href="#sobre-tickeat">TickEat</a></li>
+                        <li><a href="#caracteristicas">Características</a></li>
+                        <li><a href="#ventajas">Ventajas</a></li>
+                        <li><a href="#contacto">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contacto</h4>
+                    <p>contacto@datech.com</p>
+                    <p>+34 XXX XXX XXX</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 DaTech. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
